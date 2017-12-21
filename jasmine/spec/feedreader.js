@@ -78,13 +78,13 @@ $(function() {
      */
 
     it('changes visibility when the menu icon is clicked', function() {
-      // Working same as above it is 'hidden by default' block
-      // but it is worked by class 'menu-icon-link'.
+      // The menu is changed by class 'menu-icon-link'.
       $('.menu-icon-link').click();
-      // The menu is hidden by default so toEqual is false.
+      // The menu is cliked it displays.
       expect($('body').hasClass('menu-hidden')).toEqual(false);
 
       $('.menu-icon-link').click();
+      // The menu is clicked again it hides.
       expect($('body').hasClass('menu-hidden')).toEqual(true);
     });
 
