@@ -52,11 +52,10 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 
 ## References
 
-- [Udacity - JavaScript Testing course](https://www.udacity.com/course/javascript-testing--ud549)
+- [Udacity : JavaScript Testing course](https://www.udacity.com/course/javascript-testing--ud549)
 - [Jasmine documentation](https://jasmine.github.io/)
-- [Jasmine - github](https://github.com/jasmine/jasmine)
-- [Tutorials point - JasmineJS](https://www.tutorialspoint.com/jasminejs/index.htm)
-- [How To Do In Java - Jasmine JavaScript Unit Testing Tutorial with Examples](https://howtodoinjava.com/scripting/javascript/jasmine-javascript-unit-testing-tutorial/)
-- [ENVATO TUTS+ - Testing Your JavaScript With Jasmine](https://code.tutsplus.com/tutorials/testing-your-javascript-with-jasmine--net-21229)
+- [Jasmine : github](https://github.com/jasmine/jasmine)
+- [Tutorials point : JasmineJS](https://www.tutorialspoint.com/jasminejs/index.htm)
+- [How To Do In Java : Jasmine JavaScript Unit Testing Tutorial with Examples](https://howtodoinjava.com/scripting/javascript/jasmine-javascript-unit-testing-tutorial/)
+- [ENVATO TUTS+ : Testing Your JavaScript With Jasmine](https://code.tutsplus.com/tutorials/testing-your-javascript-with-jasmine--net-21229)
 - [Udacity Frontend Nanodegree Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
-- [FeedReader Testing Project Rubric](https://review.udacity.com/#!/rubrics/18/view)

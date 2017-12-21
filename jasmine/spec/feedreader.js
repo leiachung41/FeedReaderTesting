@@ -33,8 +33,10 @@ $(function() {
      */
 
     it('have a URL defined and not empty', function() {
+      // A loop for allFeeds object have a URL defined and not empty.
       for (i=0; i<allFeeds.length; i++) {
         expect(allFeeds[i].url).toBeDefined();
+        // Use the length for identifying the URL is empty or not.
         expect(allFeeds[i].url.length).not.toBe(0);
       }
     });
@@ -45,8 +47,10 @@ $(function() {
      */
 
     it('have a name defined and not empty', function() {
+      // A loop for allFeeds object have a name defined and not empty.
       for (i=0; i<allFeeds.length; i++) {
         expect(allFeeds[i].name).toBeDefined();
+        // Use the length for identifying the name is empty or not.
         expect(allFeeds[i].name.length).not.toBe(0);
       }
     });
@@ -63,6 +67,7 @@ $(function() {
      */
 
     it('is hidden by default', function() {
+      // The menu is hidden by class 'menu-hidden'.
       expect($('body').hasClass('menu-hidden')).toBe(true);
     });
 
@@ -73,7 +78,10 @@ $(function() {
      */
 
     it('changes visibility when the menu icon is clicked', function() {
+      // Working same as above it is 'hidden by default' block
+      // but it is worked by class 'menu-icon-link'.
       $('.menu-icon-link').click();
+      // The menu is hidden by default so toEqual is false.
       expect($('body').hasClass('menu-hidden')).toEqual(false);
 
       $('.menu-icon-link').click();
@@ -92,6 +100,7 @@ $(function() {
      * the use of Jasmine's beforeEach and asynchronous done() function.
      */
 
+    // Use beforeEach and done() for testing loadFeed().
     beforeEach(function(done) {
       loadFeed(0, function() {
         done();
@@ -99,8 +108,10 @@ $(function() {
     });
 
     it('have at least a single .entry element', function() {
+      // Declare a variable for class entry.
       var entryClass = $('.entry');
-
+      // Use the length for identifying the loadFeed()
+      // has at least a class entry or not.
       expect(entryClass.length).not.toBe(0);
     });
 
@@ -114,19 +125,25 @@ $(function() {
      * Remember, loadFeed() is asynchronous.
      */
 
+    // Declare two variables for testing a new feed.
     var feedBefore;
     var feedAfter;
 
+    // Use beforeEach and done() for testing a new feed.
     beforeEach(function(done) {
       loadFeed(0, function() {
+        // Identify feedBefore has the content.
         feedBefore = $('.feed').html();
         done();
       });
     });
 
-    it('changes feed content when a new feed is loaded', function(done) {
+    it('changes feed the content when a new feed is loaded', function(done) {
       loadFeed(1, function() {
+        // Identify feedAfter has the content.
         feedAfter = $('.feed').html();
+        // Compare feedAfter and feedBefore to identify
+        // they have same content or not.
         expect(feedAfter).not.toEqual(feedBefore);
         done();
       });
