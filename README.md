@@ -21,9 +21,9 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 1. Take the JavaScript Testing [course](https://www.udacity.com/course/ud549)
 2. Download the [required project assets](http://github.com/udacity/frontend-nanodegree-feedreader).
 3. Review the functionality of the application within your browser.
-4. Explore the application's HTML (`*./index.html*`), CSS (`*./css/style.css*`) and JavaScript (`*./js/app.js*`) to gain an understanding of how it works.
-5. Explore the Jasmine spec file (`*./jasmine/spec/feedreader.js*`) and review the [Jasmine documentation](http://jasmine.github.io).
-6. Edit the `allFeeds` variable in `*./js/app.js*` to make the provided test fail and see how Jasmine visualizes this failure in your application.
+4. Explore the application's HTML `./index.html`, CSS `./css/style.css` and JavaScript `./js/app.js` to gain an understanding of how it works.
+5. Explore the Jasmine spec file `./jasmine/spec/feedreader.js` and review the [Jasmine documentation](http://jasmine.github.io).
+6. Edit the `allFeeds` variable in `./js/app.js` to make the provided test fail and see how Jasmine visualizes this failure in your application.
 7. Return the `allFeeds` variable to a passing state.
 8. Write a test that loops through each feed in the `allFeeds` object and ensures it has a URL defined and that the URL is not empty.
 9. Write a test that loops through each feed in the `allFeeds` object and ensures it has a name defined and that the name is not empty.
