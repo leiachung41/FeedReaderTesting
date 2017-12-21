@@ -45,7 +45,7 @@ $(function() {
      * how we're performing the hiding/showing of the menu element.
      */
     it('the menu element is hidden by default', function() {
-      expect()
+      expect($('body').hasClass('menu-hidden')).toBe(true);
     });
 
     /* TODO: Write a test that ensures the menu changes visibility
@@ -53,10 +53,12 @@ $(function() {
      * This test should have two expectations:
      * does the menu display when clicked and does it hide when clicked again.
      */
-    it('the menu changes visibility when the menu is clicked', function() {
-      expect();
-      expect();
-    });
+     it('the menu changes visibility when the menu icon is clickd', function() {
+       $('.menu-icon-link').click();
+       expect($('body').hasClass('menu-hidden')).toEqual(false);
+       $('.menu-icon-link').click();
+       expect($('body').hasClass('menu-hidden')).toEqual(true);
+     });
 
   });
 
