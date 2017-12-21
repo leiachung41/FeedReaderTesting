@@ -69,6 +69,7 @@ $(function() {
      it('the menu changes visibility when the menu icon is clickd', function() {
       $('.menu-icon-link').click();
       expect($('body').hasClass('menu-hidden')).toEqual(false);
+
       $('.menu-icon-link').click();
       expect($('body').hasClass('menu-hidden')).toEqual(true);
      });
@@ -84,8 +85,15 @@ $(function() {
      * Remember, loadFeed() is asynchronous so this test will require
      * the use of Jasmine's beforeEach and asynchronous done() function.
      */
-    it('', function() {
+    beforeEach(function(done) {
+      loadFeed(0, function() {
+        done();
+      });
+    });
 
+    it('there is at least a single .entry element', function() {
+      var entryClass = $('.entry');
+      expect(entryClass.length).not.toBe(0);
     });
 
   });
