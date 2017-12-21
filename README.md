@@ -43,7 +43,7 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 ## How to Run the Application
 
 #### 1. You can download or clone the repository from [https://github.com/leachung41/FeedReaderTesting](https://github.com/leachung41/FeedReaderTesting).
-#### 2. Find a index.html file in the repository, and open the index.html file in a browser.
+#### 2. Find a *index.html* file in the repository, and open the *index.html* file in a browser.
 #### 3. You can see the result of jasmine on the bottom of the page.
 
 - Main page: *./index.html*
