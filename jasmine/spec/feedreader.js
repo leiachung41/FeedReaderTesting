@@ -72,7 +72,7 @@ $(function() {
      * does the menu display when clicked and does it hide when clicked again.
      */
 
-    it('changes visibility when the menu icon is clickd', function() {
+    it('changes visibility when the menu icon is clicked', function() {
       $('.menu-icon-link').click();
       expect($('body').hasClass('menu-hidden')).toEqual(false);
 
@@ -124,7 +124,7 @@ $(function() {
       });
     });
 
-    it('changes feed content', function(done) {
+    it('changes feed content when a new feed is loaded', function(done) {
       loadFeed(1, function() {
         feedAfter = $('.feed').html();
         expect(feedAfter).not.toEqual(feedBefore);
