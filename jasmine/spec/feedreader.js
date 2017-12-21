@@ -32,7 +32,7 @@ $(function() {
      * and ensures it has a URL defined and that the URL is not empty.
      */
 
-    it('allFeeds object has a URL defined and not empty', function() {
+    it('have a URL defined and not empty', function() {
       for (i=0; i<allFeeds.length; i++) {
         expect(allFeeds[i].url).toBeDefined();
         expect(allFeeds[i].url.length).not.toBe(0);
@@ -44,7 +44,7 @@ $(function() {
      * and ensures it has a name defined and that the name is not empty.
      */
 
-    it('allFeeds object has a name defined and not empty', function() {
+    it('have a name defined and not empty', function() {
       for (i=0; i<allFeeds.length; i++) {
         expect(allFeeds[i].name).toBeDefined();
         expect(allFeeds[i].name.length).not.toBe(0);
@@ -62,7 +62,7 @@ $(function() {
      * how we're performing the hiding/showing of the menu element.
      */
 
-    it('the menu element is hidden by default', function() {
+    it('is hidden by default', function() {
       expect($('body').hasClass('menu-hidden')).toBe(true);
     });
 
@@ -72,13 +72,13 @@ $(function() {
      * does the menu display when clicked and does it hide when clicked again.
      */
 
-     it('the menu changes visibility when the menu icon is clickd', function() {
+    it('changes visibility when the menu icon is clickd', function() {
       $('.menu-icon-link').click();
       expect($('body').hasClass('menu-hidden')).toEqual(false);
 
       $('.menu-icon-link').click();
       expect($('body').hasClass('menu-hidden')).toEqual(true);
-     });
+    });
 
   });
 
@@ -98,7 +98,7 @@ $(function() {
       });
     });
 
-    it('there is at least a single .entry element', function() {
+    it('have at least a single .entry element', function() {
       var entryClass = $('.entry');
 
       expect(entryClass.length).not.toBe(0);
@@ -124,7 +124,7 @@ $(function() {
       });
     });
 
-    it('the loadFeed function content changes', function(done) {
+    it('changes feed content', function(done) {
       loadFeed(1, function() {
         feedAfter = $('.feed').html();
         expect(feedAfter).not.toEqual(feedBefore);
