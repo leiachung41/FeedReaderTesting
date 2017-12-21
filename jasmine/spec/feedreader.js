@@ -13,6 +13,7 @@ $(function() {
    * a related set of tests. This suite is all about the RSS feeds definitions,
    * the allFeeds variable in our application.
    */
+
   describe('RSS Feeds', function() {
     /* This is our first test - it tests to make sure that
      * the allFeeds variablehas been defined and that it is not empty.
@@ -20,6 +21,7 @@ $(function() {
      * What happens when you change allFeeds in app.js to be an empty array
      * and refresh the page?
      */
+
     it('are defined', function() {
       expect(allFeeds).toBeDefined();
       expect(allFeeds.length).not.toBe(0);
@@ -29,6 +31,7 @@ $(function() {
     /* TODO: Write a test that loops through each feed in the allFeeds object
      * and ensures it has a URL defined and that the URL is not empty.
      */
+
     it('allFeeds object has a URL defined and not empty', function() {
       for (i=0; i<allFeeds.length; i++) {
         expect(allFeeds[i].url).toBeDefined();
@@ -40,6 +43,7 @@ $(function() {
     /* TODO: Write a test that loops through each feed in the allFeeds object
      * and ensures it has a name defined and that the name is not empty.
      */
+
     it('allFeeds object has a name defined and not empty', function() {
       for (i=0; i<allFeeds.length; i++) {
         expect(allFeeds[i].name).toBeDefined();
@@ -57,6 +61,7 @@ $(function() {
      * You'll have to analyze the HTML and  the CSS to determine
      * how we're performing the hiding/showing of the menu element.
      */
+
     it('the menu element is hidden by default', function() {
       expect($('body').hasClass('menu-hidden')).toBe(true);
     });
@@ -66,6 +71,7 @@ $(function() {
      * This test should have two expectations:
      * does the menu display when clicked and does it hide when clicked again.
      */
+
      it('the menu changes visibility when the menu icon is clickd', function() {
       $('.menu-icon-link').click();
       expect($('body').hasClass('menu-hidden')).toEqual(false);
@@ -85,6 +91,7 @@ $(function() {
      * Remember, loadFeed() is asynchronous so this test will require
      * the use of Jasmine's beforeEach and asynchronous done() function.
      */
+
     beforeEach(function(done) {
       loadFeed(0, function() {
         done();
@@ -93,6 +100,7 @@ $(function() {
 
     it('there is at least a single .entry element', function() {
       var entryClass = $('.entry');
+
       expect(entryClass.length).not.toBe(0);
     });
 
@@ -105,8 +113,23 @@ $(function() {
      * by the loadFeed function that the content actually changes.
      * Remember, loadFeed() is asynchronous.
      */
-    it('', function() {
 
+    var feedBefore;
+    var feedAfter;
+
+    beforeEach(function(done) {
+      loadFeed(0, function() {
+        feedBefore = $('.feed').html();
+        done();
+      });
+    });
+
+    it('the loadFeed function content changes', function(done) {
+      loadFeed(1, function() {
+        feedAfter = $('.feed').html();
+        expect(feedAfter).not.toEqual(feedBefore);
+        done();
+      });
     });
 
   });
