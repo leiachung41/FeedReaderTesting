@@ -36,6 +36,7 @@ $(function() {
       // A loop for allFeeds object have a URL defined and not empty.
       for (i=0; i<allFeeds.length; i++) {
         expect(allFeeds[i].url).toBeDefined();
+
         // Use the length for identifying the URL is empty or not.
         expect(allFeeds[i].url.length).not.toBe(0);
       }
@@ -50,6 +51,7 @@ $(function() {
       // A loop for allFeeds object have a name defined and not empty.
       for (i=0; i<allFeeds.length; i++) {
         expect(allFeeds[i].name).toBeDefined();
+
         // Use the length for identifying the name is empty or not.
         expect(allFeeds[i].name.length).not.toBe(0);
       }
@@ -80,10 +82,13 @@ $(function() {
     it('changes visibility when the menu icon is clicked', function() {
       // The menu is changed by class 'menu-icon-link'.
       $('.menu-icon-link').click();
+
       // The menu is cliked it displays.
       expect($('body').hasClass('menu-hidden')).toEqual(false);
 
+
       $('.menu-icon-link').click();
+
       // The menu is clicked again it hides.
       expect($('body').hasClass('menu-hidden')).toEqual(true);
     });
@@ -110,6 +115,7 @@ $(function() {
     it('have at least a single .entry element', function() {
       // Declare a variable for class entry.
       var entryClass = $('.entry');
+
       // Use the length for identifying the loadFeed()
       // has at least a class entry or not.
       expect(entryClass.length).not.toBe(0);
@@ -142,6 +148,7 @@ $(function() {
       loadFeed(1, function() {
         // Identify feedAfter has the content.
         feedAfter = $('.feed').html();
+
         // Compare feedAfter and feedBefore to identify
         // they have same content or not.
         expect(feedAfter).not.toEqual(feedBefore);
