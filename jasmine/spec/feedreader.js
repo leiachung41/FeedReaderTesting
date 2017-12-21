@@ -12,8 +12,8 @@ $(function() {
   This suite is all about the RSS feeds definitions, the allFeeds variable in our application. */
 
   describe('RSS Feeds', function() {
-    /* This is our first test - it tests to make sure that the allFeeds variablehas
-    been defined and that it is not empty.
+    /* This is our first test - it tests to make sure that 
+    the allFeeds variablehas been defined and that it is not empty.
     Experiment with this before you get started on the rest of this project.
     What happens when you change allFeeds in app.js to be an empty array and refresh the page? */
 
